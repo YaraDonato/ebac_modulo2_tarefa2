@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body > header{
+    background-color: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 16px;
+}
+
+header li a{
+    color: #f5f6fa;
+    text-decoration: none;
+    position: relative;
+}
+/* after: voce adiciona um elemento depois */
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: greenyellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article img {
+    /* height: 180px; */
+    width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
+section{
+    padding: 16px 0;
+}
+
+section h2,
+.articles article{
+    margin-bottom: 16px;
+}
+
+
+.articles article h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a{
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3{
+    font-size: 24px;
+}
+
+section h2{
+    font-size: 32px;
+}
+
+#sports {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+/* INICIO MUDANDO A COR DO LER MAIS */
+#sports .articles article a {
+    background-color: #009432;
+    border-radius: 10%;
+    background: transparent;
+    border: 2px solid #009432;
+    color: #009432;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#sports .articles article a:hover{
+    box-shadow: 0 0 15px #009432;
+}  
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+    border-radius: 10%;
+    background: transparent;
+    border: 2px solid #ff9f1a;
+    color: #ff9f1a;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#economy .articles article a:hover{
+    box-shadow: 0 0 15px #ff9f1a;
+}  
+
+#entertainment .articles article a {
+    background-color: #1774dd;
+    border-radius: 10%;
+    background: transparent;
+    border: 2px solid #2088ff;
+    color: #2088ff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#entertainment .articles article a:hover{
+    box-shadow: 0 0 15px #2088ff;
+}  
+
+#technology .articles article a {
+    background-color: black;
+    border-radius: 10%;
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#technology .articles article a:hover{
+    box-shadow: 0 0 15px black;
+}  
+
+/* FIM DO MUDANDO A COR DO LER MAIS */
+
+
+/* INICIO TESTE DE BOTAO*/
+/*
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #5E548E, #231942);
+    gap: 25px;
+}
+
+Isso seria pra fazer um fundo legal, eu pretendo usar essa ideia mais tarde
+*/
+
+#sports .articles article a{
+    letter-spacing: 1px;
+    color: #009432;
+    border-top: 2px solid #009432;
+    border-bottom: 2px solid #009432;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+#sports .articles article a::before{
+    content: '';
+    background: linear-gradient(to left, rgba(255, 255, 255, .15), transparent);
+    transform: skewX(45deg) translate(0px);
+    transition: .5s;
+}
+#sports .articles::before article a:hover{
+    transform: skewX(45deg) translate(200px);
+}
+
+#economy .articles article a{
+    letter-spacing: 1px;
+    color: #ff9f1a;
+    border-top: 2px solid #ff9f1a;
+    border-bottom: 2px solid #ff9f1a;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+#economy .articles article a::before{
+    content: '';
+    background: linear-gradient(to left, rgba(255, 255, 255, .15), transparent);
+    transform: skewX(45deg) translate(0px);
+    transition: .5s;
+}
+#economy .articles::before article a:hover{
+    transform: skewX(45deg) translate(200px);
+}
+
+#entertainment .articles article a{
+    letter-spacing: 1px;
+    color: #1774dd;
+    border-top: 2px solid #2088ff;
+    border-bottom: 2px solid #2088ff;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+#entertainment .articles article a::before{
+    content: '';
+    background: linear-gradient(to left, rgba(255, 255, 255, .15), transparent);
+    transform: skewX(45deg) translate(0px);
+    transition: .5s;
+}
+#entertainment .articles::before article a:hover{
+    transform: skewX(45deg) translate(200px);
+}
+
+#technology .articles article a{
+    letter-spacing: 1px;
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+#technology .articles article a::before{
+    content: '';
+    background: linear-gradient(to left, rgba(255, 255, 255, .15), transparent);
+    transform: skewX(45deg) translate(0px);
+    transition: .5s;
+}
+#technology .articles::before article a:hover{
+    transform: skewX(45deg) translate(200px);
+}
+
+/* FIM TESTE TE BOTÃO*/
+
+#economy {
+    background-color: #f8f59f;
+}
+
+#technology{
+    background-color: gray;
+}
+
+#entertainment{
+    background-color: #76bedf;
+}
+
+.container{
+    text-align: center;
+    font-size: large;
+}
+
+
+.economia{
+    background-color: #e4b45b;
+
+}
+
+.esportes{
+    background-color: #2d9e53;
+}
+
+.entretenimento{
+    background-color: #2088ff;
+}
+
+.tecnologia{
+    background-color: #5e5e5e;
+}
+
+.zoom{
+    overflow: hidden;
+}
+
+.zoom img{
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.zoom:hover img{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Anotações */
+
+/*
+h2{
+    color: green;
+}
+ O de cima é adicionando uma TAG
+
+#economy h2{
+    color: gold;
+}
+ O de cima é adicionando um ID ao css
+
+.creation-date{
+    color: white;
+}
+ O de cima é adicionando uma class ao CSS
+
+* {
+    color: red;
+}
+ O de cima são todos os elementos da tela
